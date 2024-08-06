@@ -1,0 +1,12 @@
+body {
+    background: yellow;
+}
+
+form {
+    background-color: rgb(209, 204, 204);
+    padding: 20px;
+}
+
+.entry {
+    padding: 0 0 10px 0;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/styles/main.css}" />
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <h3>Student Registration Form</h3>
+    <form class="studentform" th:action="@{/processStudentForm}" th:object="${student}" method="POST">
+        <div class="entry">
+            <label for="firstName">First name:</label><input type="text" th:field="*{firstName}" />
+        </div>
+        <div class="entry">
+            <label for="lastName">Last name:</label><input type="text" th:field="*{lastName}" />
+        </div>
+        <input type="submit" value="Submit" />
+    </form>
+
+</body>
+
+</html>
