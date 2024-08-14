@@ -22,6 +22,9 @@ public class StudentController {
     @Value("#{${genders}}")
     private Map<String, String> genders;
 
+    // import the gender map from application.properties to the gender list
+    @Value("#{${courses}}")
+    private Map<Integer,String> courses;
 
     @GetMapping("/form")
     public String showForm(Model model) {
@@ -30,6 +33,7 @@ public class StudentController {
         // pass the countries list to the model
         model.addAttribute("countries", countries);
         model.addAttribute("genders", genders);
+        model.addAttribute("courses", courses);
         return "form";
     }
 

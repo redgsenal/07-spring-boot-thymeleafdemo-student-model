@@ -32,6 +32,10 @@
         <label for="gender">Gender:</label>
         <input type="radio" th:field="*{gender}" th:each="gender : ${genders}" th:value="${gender.key}" th:text="${gender.value}"></input>
     </div>
+    <div class="entry">
+        <label for="courses">Courses:</label>
+        <input type="checkbox" th:field="*{courses}" th:each="course : ${courses}" th:value="${course.key}" th:text="${course.value}"></input>
+    </div>
     <input type="submit" value="Submit"/>
 </form>
 </body>

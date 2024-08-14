@@ -1,11 +1,14 @@
 package com.springboot.tutorial.thymeleafdemo.model;
 
+import java.util.List;
+
 public class Student {
 
     private String firstName;
     private String lastName;
     private String country;
     private String gender;
+    private List<Integer> courses;
 
     public Student() {
 
@@ -43,8 +46,16 @@ public class Student {
         this.gender = gender;
     }
 
+    public List<Integer> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Integer> courses) {
+        this.courses = courses;
+    }
+
     @Override
     public String toString() {
-        return "Student [firstName=" + firstName + ", lastName=" + lastName + ", gender=" + gender + ", country=" + country + "]";
+        return "Student [firstName=" + firstName + ", lastName=" + lastName + ", gender=" + gender + " country=" + country + "]";
     }
 }
