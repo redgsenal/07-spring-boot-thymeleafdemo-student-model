@@ -30,7 +30,10 @@
     </div>
     <div class="entry">
         <label for="gender">Gender:</label>
-        <input type="radio" th:field="*{gender}" th:each="gender : ${genders}" th:value="${gender.key}" th:text="${gender.value}"></input>
+        <input type="radio" th:field="*{gender}" th:value="F">Female</input>
+        <input type="radio" th:field="*{gender}" th:value="M">Male</input>
+        <input type="radio" th:field="*{gender}" th:value="G">LGBT+</input>
+        <input type="radio" th:field="*{gender}" th:value="N">Prefer not to specify</input>
     </div>
     <input type="submit" value="Submit"/>
 </form>

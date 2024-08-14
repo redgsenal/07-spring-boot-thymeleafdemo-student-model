@@ -1,5 +1,6 @@
 package com.springboot.tutorial.thymeleafdemo.controller;
 
+import com.springboot.tutorial.thymeleafdemo.model.Student;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,16 +8,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.springboot.tutorial.thymeleafdemo.model.Student;
-
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class StudentController {
 
-    // import the countries frm application.properties to the countries list
+    // import the countries from application.properties to the countries list
     @Value("${countries}")
     private List<String> countries;
+
+    // import the gender map from application.properties to the gender list
+    @Value("#{${genders}}")
+    private Map<String, String> genders;
+
 
     @GetMapping("/form")
     public String showForm(Model model) {
@@ -24,6 +29,7 @@ public class StudentController {
         model.addAttribute("student", new Student());
         // pass the countries list to the model
         model.addAttribute("countries", countries);
+        model.addAttribute("genders", genders);
         return "form";
     }
 
