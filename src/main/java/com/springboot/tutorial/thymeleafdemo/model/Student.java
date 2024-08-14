@@ -4,6 +4,8 @@ public class Student {
 
     private String firstName;
     private String lastName;
+    private String country;
+    private String gender;
 
     public Student() {
 
@@ -25,8 +27,24 @@ public class Student {
         this.lastName = lastName;
     }
 
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     @Override
     public String toString() {
-        return "Student [firstName=" + firstName + ", lastName=" + lastName + "]";
+        return "Student [firstName=" + firstName + ", lastName=" + lastName + ", gender=" + gender + ", country=" + country + "]";
     }
 }

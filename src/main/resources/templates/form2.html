@@ -23,19 +23,22 @@
         <input type="text" th:field="*{lastName}"/>
     </div>
     <div class="entry">
-        <label for="country">Country:</label>
-        <select th:field="*{country}">
-            <option th:each="country : ${countries}" th:value="${country}" th:text="${country}"></option>
-        </select>
-    </div>
-    <div class="entry">
-        <label for="gender">Gender:</label>
-        <input type="radio" th:field="*{gender}" th:value="F">Female</input>
-        <input type="radio" th:field="*{gender}" th:value="M">Male</input>
-        <input type="radio" th:field="*{gender}" th:value="G">LGBT+</input>
-        <input type="radio" th:field="*{gender}" th:value="N">Prefer not to specify</input>
+        <label for="country">Country:
+            <select th:field="*{country}">
+                <option th:value="Philippines">Philippines</option>
+                <option th:value="USA">USA</option>
+                <option th:value="France">France</option>
+                <option th:value="Germany">Germany</option>
+                <option th:value="India">India</option>
+                <option th:value="Malaysia">Malaysia</option>
+                <option th:value="Singapore">Singapore</option>
+                <option th:value="Indonesia">Indonesia</option>
+            </select>
+        </label>
     </div>
     <input type="submit" value="Submit"/>
 </form>
+
 </body>
+
 </html>

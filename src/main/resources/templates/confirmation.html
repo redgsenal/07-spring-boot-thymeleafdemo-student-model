@@ -3,16 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" th:href="@{/styles/main.css}" />
+    <link rel="stylesheet" th:href="@{/styles/main.css}"/>
     <title>Student Registration Form Confirmation</title>
 </head>
 
 <body>
 
-    <h3>Student Registration Form Confirmation</h3>
-    Student confirm: <span th:text="${student.firstName} + ' ' + ${student.lastName}"></span>
+<h3>Student Registration Form Confirmation</h3>
+<p>
+    Student Details: <span
+        th:text="${student.firstName} + ' ' + ${student.lastName} + ' from ' + ${student.country}"></span>
+</p>
+<p>
+    Student Country: <span th:text="${student.country}"></span>
+</p>
+<p>
+    Student Gender: <span th:text="${student.gender}"></span>
+</p>
 
 </body>
 
