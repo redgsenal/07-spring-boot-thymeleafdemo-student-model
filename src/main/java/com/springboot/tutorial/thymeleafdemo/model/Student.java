@@ -1,6 +1,10 @@
 package com.springboot.tutorial.thymeleafdemo.model;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Student {
 
@@ -9,6 +13,9 @@ public class Student {
     private String country;
     private String gender;
     private List<Integer> courses;
+
+    @Value("#{${courses}}")
+    private Map<Integer, String> mapCourses;
 
     public Student() {
 
@@ -53,6 +60,11 @@ public class Student {
     public void setCourses(List<Integer> courses) {
         this.courses = courses;
     }
+
+    /*public List<String> selectedMapCourses() {
+        List<String> collect = this.courses.stream().filter(courseId -> mapCourses.containsKey(courseId)).collect(Collectors.toList());
+        return collect;
+    }*/
 
     @Override
     public String toString() {
